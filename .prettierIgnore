@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+.next
+out
+node_modules
+
+# Ignore all JS in libs folder:
+libs/**/*.js
