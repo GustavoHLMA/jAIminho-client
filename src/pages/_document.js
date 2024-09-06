@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* Coloque suas meta tags e links globais aqui */}</Head>
+        <Head>{/* Outras meta tags e links globais */}</Head>
         <body>
           <Main />
           <NextScript />

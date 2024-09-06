@@ -1,6 +1,12 @@
 import type { AppProps } from 'next/app';
 import GlobalStyles from '../styles/globalStyles';
 import Head from 'next/head';
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] // Todos os pesos disponíveis
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -8,11 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Strayhome</title>
+        <title>Jaiminho</title>
       </Head>
-      {/* Envolve toda a aplicação com ThemeProvider, se aplicável */}
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <div className={poppins.className}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

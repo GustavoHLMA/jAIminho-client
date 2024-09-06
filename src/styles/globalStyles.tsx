@@ -8,10 +8,13 @@ const GlobalStyles = () => (
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        /* Prevenir o zoom de duplo toque em dispositivos móveis */
+        touch-action: manipulation;
       }
 
       html {
         font-size: 100%;
+        overflow-x: hidden; /* Evita overflow horizontal na raiz */
       }
 
       html,
