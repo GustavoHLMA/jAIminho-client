@@ -7,8 +7,11 @@ import {
   ButtonItem,
   SearchBarTitle,
   SearchBar,
-  SearchContainer
+  SearchContainer,
+  ImageContainer
 } from './styles';
+import { Lupa } from '@/assets';
+import Image from 'next/image';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,6 +42,9 @@ export default function Home() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <ImageContainer>
+          <Image src={Lupa} alt="Lupa" layout="fill" objectFit="cover" />
+        </ImageContainer>
       </SearchContainer>
       <ButtonsContainer>
         {filteredRoutes.length > 0 ? (

@@ -48,7 +48,8 @@ export const SearchBarTitle = styled.p`
 
 export const SearchContainer = styled.div`
   margin-top: 1vh;
-  margin-bottom: 2.25vh;
+  margin-bottom: 6vh;
+  z-index: 0;
 `;
 
 export const SearchBar = styled.input`
@@ -60,10 +61,20 @@ export const SearchBar = styled.input`
   color: #5c5c5c;
   background-color: #fffbe3;
   font-weight: 500;
+  position: absolute;
 
   ::placeholder {
     color: rgba(92, 92, 92, 0.62);
     font-size: 1vw;
     font-weight: 500;
   }
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 2.1875vw;
+  height: 3.5vh;
+  z-index: 1;
+  margin-left: 47vw;
+  margin-top: 1.5vh;
 `;
