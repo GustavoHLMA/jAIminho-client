@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const login = async (cpf: string, password: string) => {
     try {
       const response = await axios.post(
-        'https://jaiminho-server.onrender.com',
+        'https://jaiminho-server.onrender.com/auth/login',
         {
           cpf,
           password
