@@ -11,6 +11,9 @@ import Medalha from './medalha.svg';
 import Bot from './bot.svg';
 import Correios from './correios.png';
 import ShowPassword from './showHide.svg';
+import Clipe from './clipe.svg';
+import SendIcon from './sendButton.png';
+import Jaiminho from './jaiminho.png';
 
 export {
   Logo,
@@ -25,5 +28,8 @@ export {
   Medalha,
   Bot,
   Correios,
-  ShowPassword
+  ShowPassword,
+  Clipe,
+  SendIcon,
+  Jaiminho
 };
