@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://jaiminho-server.onrender.com'
+  //baseURL: 'https://jaiminho-server.onrender.com'
+  baseURL: 'http://localhost:3001'
 });
 
 export default api;
@@ -40,9 +41,13 @@ interface ChatParams {
 
 export const sendMessageToChatbot = async ({ message }: ChatParams) => {
   try {
-    const response = await api.post('/chat', {
-      message
-    });
+    const response = await api.post(
+      '/chat',
+      {
+        message
+      },
+      { withCredentials: true }
+    );
 
     return response.data.response;
   } catch (error) {
