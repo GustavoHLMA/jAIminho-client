@@ -4,6 +4,11 @@ import Previous from './previousButton.svg';
 import LogisticaImage1 from './logisticaImage.png';
 import LogisticaImage2 from './logisticaImage2.png';
 import LogisticaImage3 from './logisticaImage3.png';
+import Dados from './dados.svg';
+import Medalha from './medalha.svg';
+import Bot from './bot.svg';
+import Correios from './correios.png';
+import ShowPassword from './showHide.svg';
 
 export {
   Logo,
@@ -11,5 +16,10 @@ export {
   Previous,
   LogisticaImage1,
   LogisticaImage2,
-  LogisticaImage3
+  LogisticaImage3,
+  Dados,
+  Medalha,
+  Bot,
+  Correios,
+  ShowPassword
 };
