@@ -81,4 +81,7 @@ No terminal, dentro da pasta do projeto, execute:
 ```bash
 npm run dev
 ```
+## Repositório da API 🔨
+- https://github.com/GustavoHLMA/jAIminho-server
+
 
