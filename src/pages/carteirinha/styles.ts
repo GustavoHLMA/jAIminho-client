@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 import { Checkbox } from '@mui/material';
-import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-import CircleIcon from '@mui/icons-material/Circle';
 
 export const Container = styled.div`
   display: flex;
@@ -65,11 +63,11 @@ export const CheckboxContainer = styled.div`
 
 export const StyledCheckbox = styled(Checkbox)`
   &.MuiCheckbox-root {
-    color: #E4E0C4;
+    color: #e4e0c4;
   }
-  
+
   &.Mui-checked {
-    color: #FFDC02;
+    color: #ffdc02;
   }
 `;
 
@@ -79,7 +77,7 @@ export const JaimicoinsContainer = styled.div`
   justify-content: center;
   gap: 3vw;
   align-items: center;
-  background-color: #FFDC02;
+  background-color: #ffdc02;
   border: none;
   border-radius: 12px;
   padding: 2vh 2vw;
@@ -114,12 +112,12 @@ export const JaimicoinsAmount = styled.p`
 `;
 
 export const PointsContainer = styled.div`
-  display: flex
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 15vh;
-`
+`;
 
 export const PointsStoreContainer = styled.div`
   display: flex;
@@ -134,7 +132,7 @@ export const PointsCard = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFDC02;
+  background-color: #ffdc02;
   border: none;
   border-radius: 12px;
   padding: 2vh;
@@ -162,8 +160,8 @@ export const PointsCardIconText = styled.div`
   font-size: 2vw;
   font-weight: 400;
   color: #003366;
-  align-text: center;
-`
+  text-align: center;
+`;
 
 export const JaimicoinsIconPoints = styled.div`
   position: relative;
@@ -192,4 +190,3 @@ export const ImageGiftCardContainer = styled.div`
   z-index: 1;
   margin-bottom: 1vh;
 `;
-
