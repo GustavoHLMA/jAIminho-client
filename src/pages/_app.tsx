@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import GlobalStyles from '../styles/globalStyles';
 import Head from 'next/head';
 import { Poppins } from '@next/font/google';
+import { AuthProvider } from '@/contexts/authContext';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,10 +17,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jaiminho</title>
       </Head>
-      <div className={poppins.className}>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </div>
+      <AuthProvider>
+        <div className={poppins.className}>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </div>
+      </AuthProvider>
     </>
   );
 }
