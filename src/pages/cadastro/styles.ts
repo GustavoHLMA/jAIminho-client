@@ -123,3 +123,17 @@ export const ShowPasswordButton = styled.div`
   height: 2vw;
   bottom: 1vh;
 `;
+
+export const Subtitle = styled.p`
+  font-size: 1vw;
+  font-weight: 300;
+  color: #5c5c5c;
+  margin-bottom: 1.5vh;
+  align-self: center;
+
+  strong {
+    font-weight: 600;
+    cursor: pointer;
+    color: #034381;
+  }
+`;

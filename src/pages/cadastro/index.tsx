@@ -10,7 +10,8 @@ import {
   CorreiosContainer,
   InputField,
   Button,
-  ShowPasswordButton
+  ShowPasswordButton,
+  Subtitle
 } from './styles';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -107,6 +108,10 @@ export default function Cadastro() {
           />
         </CorreiosContainer>
         <FormTitle>Cadastro</FormTitle>
+        <Subtitle>
+          Já possui uma conta?{' '}
+          <strong onClick={() => router.push('/login')}> Login </strong>
+        </Subtitle>
         <form onSubmit={handleSubmit}>
           <InputField
             type="text"
