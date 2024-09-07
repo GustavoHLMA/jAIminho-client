@@ -10,25 +10,25 @@ O JAIminho é uma solução desenvolvida para otimizar os atendimentos nas agên
 
 Breno do Amaral Falcão Souto<br/>
 📧 E-mail: brenodoamaral1@gmail.com<br/>
-🌐 GitHub: [github.com/brenodoamaral1](https://github.com/brenodoamaral1)
+🌐 GitHub: [brenodoamaral1](https://github.com/brenodoamaral1)
 
 Gustavo Henrique Lima Mendes de Almeida<br/>
 📧 E-mail: gustavohlma8@gmail.com<br/>
-🌐 GitHub: [github.com/GustavoHLMA](https://github.com/GustavoHLMA)
+🌐 GitHub: [GustavoHLMA](https://github.com/GustavoHLMA)
 
 Luis Vinicius<br/>
 📧 E-mail: luis@hotmail.com<br/>
-🌐 GitHub: [github.com/luislauriano](https://github.com/luislauriano)
+🌐 GitHub: [luislauriano](https://github.com/luislauriano)
 
 Rennan José da Silva Miranda<br/>
 📧 E-mail: rennan.jsmiranda@gmail.com<br/>
-🌐 GitHub: github.com/RennanJSM<br/>
+🌐 GitHub: [RennanJSM](https://github.com/RennanJSM )
 
 #### 🎨 UX/UI Designer
 
 Gabriella Graciano de Souza<br/>
 📧 E-mail: gabifc_graciano@hotmail.com<br/>
-🖋️ Behance: [behance.net/gabygraciano](behance.net/gabygraciano)
+🖋️ Behance: [gabygraciano](behance.net/gabygraciano)
 
 ## Documentação 📄
 
@@ -69,12 +69,8 @@ https://github.com/GustavoHLMA/jAIminho-client.git
 
 ### Passo 2: Instalar Dependências
 
-Navegue até a pasta do projeto clonado e execute os seguintes comandos para instalar as dependências necessárias:
+Navegue até a pasta do projeto clonado e execute o seguintes comando para instalar as dependências necessárias:
 ```bash
-cd frontend
-npm install
-
-cd backend
 npm install
 ```
 
@@ -83,7 +79,6 @@ npm install
 ### Passo 1: Iniciar o Servidor Expo
 No terminal, dentro da pasta do projeto, execute:
 ```bash
-cd frontend
-npx expo start
+npm run dev
 ```
 
