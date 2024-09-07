@@ -15,13 +15,30 @@ import {
 } from './styles';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Logo, Dados, Medalha, Bot, Correios, ShowPassword } from '@/assets'; // Importando a imagem de mostrar senha
+import { Logo, Dados, Medalha, Bot, Correios, ShowPassword } from '@/assets';
+import { useAuth } from '@/contexts/authContext';
+import { useRouter } from 'next/router';
 
 export default function Login() {
+  const [cpf, setCpf] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const { login } = useAuth();
+  const router = useRouter();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Impede que a página recarregue
+    try {
+      await login(cpf, password);
+      router.push('/portal');
+    } catch {
+      alert('Login falhou. Reveja suas credenciais!.');
+      console.log('Login failed. Please check your credentials.');
+    }
   };
 
   return (
@@ -82,12 +99,19 @@ export default function Login() {
           É funcionário dos <strong>Correios</strong> e ainda não tem conta?
           Fale com seu <strong>gestor</strong>.
         </Subtitle>
-        <form>
-          <InputField type="text" placeholder="CPF" />
+        <form onSubmit={handleSubmit}>
+          <InputField
+            type="text"
+            placeholder="CPF"
+            value={cpf}
+            onChange={(e) => setCpf(e.target.value)}
+          />
           <div style={{ position: 'relative' }}>
             <InputField
               type={showPassword ? 'text' : 'password'}
               placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <span
               onClick={togglePasswordVisibility}
@@ -111,7 +135,7 @@ export default function Login() {
               </ShowPasswordButton>
             </span>
           </div>
-          <LoginButton>Entrar</LoginButton>
+          <LoginButton type="submit">Entrar</LoginButton>
         </form>
       </RightSide>
     </Container>
