@@ -18,7 +18,11 @@ const Navbar = () => {
   const routes = [
     { name: 'PORTAL', path: '/portal' },
     { name: 'CHAT', path: '/chat' },
-    { name: 'DASHBOARD', path: '/dashboard' },
+    {
+      name: 'DASHBOARD',
+      path: 'https://jaiminho.streamlit.app/',
+      external: true
+    }, // Link externo
     { name: 'CAPACIT.AI', path: '/capacitai' },
     { name: 'CARTERINHA', path: '/carterinha' }
   ];
@@ -44,7 +48,15 @@ const Navbar = () => {
           {routes.map((route) => (
             <MenuItem
               key={route.name}
-              onClick={() => router.push(route.path)}
+              onClick={() => {
+                if (route.external) {
+                  // Abre o link externo em uma nova aba
+                  window.open(route.path, '_blank');
+                } else {
+                  // Caso contrário, use o roteamento interno
+                  router.push(route.path);
+                }
+              }}
               isActive={router.pathname === route.path}
             >
               {route.name}
