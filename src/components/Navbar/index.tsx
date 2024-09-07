@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'CHAT', path: '/chat' },
     { name: 'DASHBOARD', path: '/dashboard' },
     { name: 'CAPACIT.AI', path: '/capacitai' },
-    { name: 'CARTERINHA', path: '/carterinha' }
+    { name: 'CARTEIRINHA', path: '/carteirinha' }
   ];
 
   return (
