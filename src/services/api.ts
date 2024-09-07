@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  //baseURL: 'https://jaiminho-server.onrender.com'
-  baseURL: 'http://localhost:3001'
+  baseURL: 'https://jaiminho-server.onrender.com'
 });
 
 export default api;
