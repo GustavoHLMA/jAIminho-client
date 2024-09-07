@@ -24,7 +24,7 @@ const Navbar = () => {
       external: true
     }, // Link externo
     { name: 'CAPACIT.AI', path: '/capacitai' },
-    { name: 'CARTERINHA', path: '/carterinha' }
+    { name: 'CARTEIRINHA', path: '/carteirinha' }
   ];
 
   return (
