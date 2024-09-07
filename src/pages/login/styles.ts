@@ -83,9 +83,10 @@ export const Subtitle = styled.p`
   color: #5c5c5c;
   margin-bottom: 1.5vh;
   align-self: center;
+  text-align: center;
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 `;
 
@@ -133,4 +134,15 @@ export const ShowPasswordButton = styled.div`
   width: 2vw;
   height: 2vw;
   bottom: 1vh;
+`;
+
+export const Cadastro = styled.p`
+  font-size: 1vw;
+  font-weight: 300;
+  color: #5c5c5c;
+  align-self: center;
+  font-weight: 600;
+  color: #034381;
+  cursor: pointer;
+  align-self: start;
 `;

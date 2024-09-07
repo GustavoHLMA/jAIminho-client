@@ -97,7 +97,16 @@ export default function Login() {
         <FormTitle>Faça seu login</FormTitle>
         <Subtitle>
           É funcionário dos <strong>Correios</strong> e ainda não tem conta?
-          Fale com seu <strong>gestor</strong>.
+          Fale com seu <strong>gestor</strong> ou{' '}
+          <strong
+            onClick={() => router.push('/cadastro')}
+            style={{
+              cursor: 'pointer',
+              color: '#034381'
+            }}
+          >
+            cadastre-se.
+          </strong>
         </Subtitle>
         <form onSubmit={handleSubmit}>
           <InputField
