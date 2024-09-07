@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <Container>
       <RowContainer>
-        <Title>Bem vindo!</Title>
+        <Title>Bem-vindo!</Title>
         <LogoContainer>
           <Image
             src={Logo}
