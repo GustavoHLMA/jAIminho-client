@@ -57,7 +57,6 @@ export const ImageContainer = styled.div`
   margin-top: 1.5vh;
 `;
 
-
 export const HelpSection = styled.div`
   display: flex;
   justify-content: space-between;
@@ -67,8 +66,8 @@ export const HelpSection = styled.div`
 export const HelpVideoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 42vw
-`
+  width: 42vw;
+`;
 
 export const HelpImageContainer = styled.div`
   position: relative;
@@ -81,7 +80,7 @@ export const HelpImageContainer = styled.div`
 export const HelpText = styled.p`
   font-size: 1.2vw;
   font-weight: 500;
-  color: #5C5C5C;
+  color: #5c5c5c;
   text-align: center;
   margin-top: 1vh;
 `;
@@ -92,7 +91,8 @@ export const TableContainer = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
-    th, td {
+    th,
+    td {
       border: 1px solid #ccc;
       padding: 1vh 2vw;
       text-align: center;
@@ -129,7 +129,7 @@ export const StepCardsContainer = styled.div`
   margin-left: 10vw;
   margin-right: 10vw;
   justify-content: center;
-`
+`;
 
 export const StepCard = styled.div`
   display: flex;
@@ -159,12 +159,12 @@ export const StepNumber = styled.p`
   font-size: 3vw;
   font-weight: bold;
   color: #003366;
-`
+`;
 export const StepNumber2 = styled.p`
   font-size: 3vw;
   font-weight: bold;
   color: #fff;
-`
+`;
 
 export const StepDescription = styled.p`
   font-size: 1.2vw;

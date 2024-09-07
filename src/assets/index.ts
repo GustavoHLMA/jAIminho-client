@@ -27,7 +27,7 @@ export {
   CoinIcon,
   GiftCardIcon,
   HelpImage1,
-  HelpImage2
+  HelpImage2,
   Dados,
   Medalha,
   Bot,
