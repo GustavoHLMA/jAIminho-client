@@ -64,19 +64,19 @@ Gabriella Graciano de Souza<br/>
 
 Abra o terminal e execute o seguinte comando para clonar o repositório do projeto:
 ```bash
-https://github.com/GustavoHLMA/jAIminho-client.git
+git clone https://github.com/GustavoHLMA/jAIminho-client.git
 ```
 
 ### Passo 2: Instalar Dependências
 
-Navegue até a pasta do projeto clonado e execute o seguintes comando para instalar as dependências necessárias:
+Navegue até a pasta do projeto clonado e execute o seguinte comando para instalar as dependências necessárias:
 ```bash
 npm install
 ```
 
 ## Rodando o Projeto 🏃
 
-### Passo 1: Iniciar o Servidor Expo
+### Passo 1: Iniciar o Servidor
 No terminal, dentro da pasta do projeto, execute:
 ```bash
 npm run dev
