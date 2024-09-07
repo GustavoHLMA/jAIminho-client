@@ -1,14 +1,20 @@
-import { styled } from '@mui/system';
-import { Box, IconButton, TextField } from '@mui/material';
+import styled from '@emotion/styled';
 
-export const Container = styled(Box)({
-  display: 'flex',
-  height: '100vh',
-  backgroundColor: '#ffffff',
-  fontFamily: 'Poppins'
-});
+// Interface para as propriedades do container de mensagens
+interface MessageContainerProps {
+  sender: 'user' | 'bot';
+}
 
-export const NavContainer = styled(Box)`
+// Container principal
+export const Container = styled.div`
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 30vh;
+`;
+
+// Nav container
+export const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 4.5vh;
@@ -17,94 +23,122 @@ export const NavContainer = styled(Box)`
   padding-right: 4.69vw;
 `;
 
-export const Navbar = styled(Box)({
-  width: '100%',
-  padding: '10px 20px',
-  backgroundColor: '#ffffff',
-  boxShadow: '0 1px 5px rgba(0, 0, 0, 0.1)',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginBottom: '7rem'
-});
+// Sidebar (barra lateral)
+export const Sidebar = styled.div`
+  width: 20vw;
+  height: 100vh;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  padding: 2vh 2vw;
+  scrollbar-width: thin;
+  scrollbar-color: #ffcc00 transparent;
 
-export const Sidebar = styled(Box)({
-  width: '250px', // Define a largura da sidebar
-  height: '100vh', // Ocupa a altura total da viewport
-  backgroundColor: '#F9F9F9', // Fundo branco para a sidebar
-  borderRight: '1px solid #ddd', // Borda para separar visualmente a sidebar
-  overflowY: 'auto', // Adiciona a rolagem quando o conteúdo ultrapassar a altura
-  padding: '20px',
-  marginLeft: '18px',
-  scrollbarWidth: 'thin', // Definir largura da scrollbar
-  scrollbarColor: '#ffcc00 transparent', // Cor personalizada da barra de rolagem
-  '&::-webkit-scrollbar': {
-    width: '8px'
-  },
-  '&::-webkit-scrollbar-thumb': {
-    backgroundColor: '#ffcc00', // Cor do scroll
-    borderRadius: '8px'
+  &::-webkit-scrollbar {
+    width: 0.8vw;
   }
-});
 
-export const ChatArea = styled(Box)({
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '20px',
-  backgroundColor: '#ffffff',
-  height: '100vh',
-  position: 'relative'
-});
-
-export const ChatInputArea = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  padding: '0 10px',
-  backgroundColor: '#FFFBE3',
-  borderRadius: '30px',
-  border: '0.5px solid #FFDC02',
-  width: '81%',
-  boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-  position: 'absolute',
-  bottom: '20px',
-  left: '50%',
-  transform: 'translateX(-50%)'
-});
-
-export const InputField = styled(TextField)({
-  flex: 1,
-  backgroundColor: 'transparent',
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      display: 'none'
-    },
-    '&.Mui-focused fieldset': {
-      display: 'none'
-    }
-  },
-  '& input': {
-    padding: '10px'
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    border-radius: 1vw;
   }
-});
+`;
 
-export const SendButton = styled(IconButton)({
-  backgroundColor: '#004785',
-  color: '#FFD700',
-  borderRadius: '50%',
-  padding: '7px',
-  marginLeft: '10px',
-  boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-  '&:hover': {
-    backgroundColor: '#003366'
-  }
-});
+export const ChatArea = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2vh 2vw;
+  background-color: #ffffff;
+  height: 92vh;
+  position: relative;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+`;
 
-export const ClipButton = styled(IconButton)({
-  backgroundColor: 'transparent',
-  color: '#004785',
-  padding: '10px',
-  marginRight: '10px'
-});
+// Input do chat (rodapé)
+export const ChatInputArea = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  background-color: #fffbe3;
+  border-radius: 3rem;
+  border: 0.5px solid #ffdc02;
+  width: 50vw;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 2vh;
+  left: 60%;
+  transform: translateX(-50%);
+`;
+
+// Campo de input de mensagens
+export const InputField = styled.input`
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 2vh;
+  font-size: 1vw;
+`;
+
+// Botão de envio
+export const SendButton = styled.button`
+  position: relative;
+  padding: 2.125vh;
+  margin-left: 1vw;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+`;
+
+// Botão de anexar arquivo
+export const ClipButton = styled.div`
+  position: relative;
+  padding: 2.5vh;
+  margin-right: 2vw;
+  border: none;
+  cursor: pointer;
+`;
+
+// Container das mensagens
+export const MessageContainer = styled.div<MessageContainerProps>`
+  display: flex;
+  justify-content: ${({ sender }) =>
+    sender === 'user' ? 'flex-end' : 'flex-start'};
+  padding: 2vh 0;
+  width: 48vw;
+`;
+
+// Caixa de mensagens
+export const MessageBox = styled.div<MessageContainerProps>`
+  max-width: 30vw;
+  padding: 1.5vh 2.5vw;
+  border-radius: 1.5vw;
+  background-color: ${({ sender }) =>
+    sender === 'user' ? '#D1E8FF' : '#F1F0F0'};
+  color: ${({ sender }) => (sender === 'user' ? '#004785' : '#333')};
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-left: ${({ sender }) => (sender === 'user' ? 'auto' : '0')};
+`;
+
+// Avatar do bot
+export const BotAvatar = styled.div`
+  position: relative;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50rem;
+  margin-right: 1vw;
+  background-color: #ffd700;
+  color: #004785;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  margin-top: 0.5vh;
+`;
